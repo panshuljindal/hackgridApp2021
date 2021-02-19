@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "807002813643",
+    "firebase_url": "https://hackgrid-app-default-rtdb.firebaseio.com",
+    "project_id": "hackgrid-app",
+    "storage_bucket": "hackgrid-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807002813643:android:204d1335e42fa8f8a9d74e",
+        "android_client_info": {
+          "package_name": "com.adgvit.hackgrid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807002813643-pa0u0qllogqluvd423rtfcqoo2fbkkpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQZdGomvTAp90tZG0gUaeShEXOT9Szvok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807002813643-pa0u0qllogqluvd423rtfcqoo2fbkkpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

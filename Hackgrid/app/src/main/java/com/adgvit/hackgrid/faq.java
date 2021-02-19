@@ -7,6 +7,7 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -31,6 +32,11 @@ import android.widget.Toast;
 import com.adgvit.hackgrid.R;
 import com.adgvit.hackgrid.adapter.faqAdapter;
 import com.adgvit.hackgrid.model.faqModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +51,8 @@ public class faq extends Fragment {
     EditText searchEditText;
     RecyclerView faq;
     faqAdapter faqAdapter;
-    SpeechRecognizer speechRecognizer;
-    Intent speechRecognizerIntent;
     ImageView micButton;
+    DatabaseReference myref;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +67,10 @@ public class faq extends Fragment {
         faq = view.findViewById(R.id.faqRecyclerview);
         searchEditText = view.findViewById(R.id.searchEditText);
         micButton = view.findViewById(R.id.micButton1);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        myref=database.getReference("FAQ");
+
         addData();
         adapter();
         onclicklisteners();
@@ -127,12 +136,28 @@ public class faq extends Fragment {
         });
     }
     public void addData(){
-        list1.add(new faqModel("Q. Hello","ODs will be provided to the participants for attending the workshops and events."));
-        list1.add(new faqModel("Q. Will ODs be provided?","ODs will be provided to the participants for attending the workshops and events."));
-        list1.add(new faqModel("Q. Will ODs be provided?","ODs will be provided to the participants for attending the workshops and events."));
-        list1.add(new faqModel("Q. Will ODs be provided?","ODs will be provided to the participants for attending the workshops and events."));
-        list1.add(new faqModel("Q. Will ODs be provided?","ODs will be provided to the participants for attending the workshops and events."));
-        list1.add(new faqModel("Q. Will ODs be provided?","ODs will be provided to the participants for attending the workshops and events."));
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                try {
+                    list1.clear();
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        faqModel faq = ds.getValue(faqModel.class);
+                        list1.add(new faqModel(faq.getQuestion(), faq.getAnswer()));
+                    }
+                    adapter();
+                }
+                catch (Exception e){
+                    Toast.makeText(view.getContext(), "Error Occurred Please Try Again", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
     public void adapter(){
