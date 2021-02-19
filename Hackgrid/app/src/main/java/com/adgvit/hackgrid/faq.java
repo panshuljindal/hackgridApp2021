@@ -1,7 +1,9 @@
 package com.adgvit.hackgrid;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -37,7 +39,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -70,7 +75,7 @@ public class faq extends Fragment {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myref=database.getReference("FAQ");
-
+        loadData();
         addData();
         adapter();
         onclicklisteners();
@@ -145,6 +150,7 @@ public class faq extends Fragment {
                         faqModel faq = ds.getValue(faqModel.class);
                         list1.add(new faqModel(faq.getQuestion(), faq.getAnswer()));
                     }
+                    saveData();
                     adapter();
                 }
                 catch (Exception e){
@@ -159,6 +165,24 @@ public class faq extends Fragment {
             }
         });
 
+    }
+    public void saveData(){
+        SharedPreferences preferences = view.getContext().getSharedPreferences("com.adgvit.hackgrid.faq", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(list1);
+        editor.putString("mom",json);
+        editor.apply();
+    }
+    public void loadData(){
+        SharedPreferences preferences = view.getContext().getSharedPreferences("com.adgvit.hackgrid.faq",Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = preferences.getString("mom","");
+        Type type = new TypeToken<ArrayList<faqModel>>() {}.getType();
+        list1 =gson.fromJson(json,type);
+        if(list1==null){
+            list1 =new ArrayList<>();
+        }
     }
     public void adapter(){
         faqAdapter= new faqAdapter(list1,view.getContext());
