@@ -27,8 +27,6 @@
 
     <TextView
         android:id="@+id/profileLoginTxt1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/domainsHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/robotolight"
@@ -53,7 +51,7 @@
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="14dp"
-         />
+        />
 
     <Button
         android:id="@+id/problemItemTheme"
@@ -65,9 +63,8 @@
         android:fontFamily="@font/helveticaneue_medium"
         android:text="@string/loginHackerEarth"
         android:textColor="#307FE2"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
 </LinearLayout>
