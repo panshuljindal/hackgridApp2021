@@ -1,34 +1,26 @@
-package com.adgvit.hackgrid;
+package com.adgvit.hackgrid.fragments;
 
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.media.MediaRecorder;
-import android.os.Build;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
-import android.speech.SpeechRecognizer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.adgvit.hackgrid.R;
@@ -171,13 +163,13 @@ public class faq extends Fragment {
         SharedPreferences.Editor editor = preferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(list1);
-        editor.putString("mom",json);
+        editor.putString("faq",json);
         editor.apply();
     }
     public void loadData(){
         SharedPreferences preferences = view.getContext().getSharedPreferences("com.adgvit.hackgrid.faq",Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = preferences.getString("mom","");
+        String json = preferences.getString("faq","");
         Type type = new TypeToken<ArrayList<faqModel>>() {}.getType();
         list1 =gson.fromJson(json,type);
         if(list1==null){

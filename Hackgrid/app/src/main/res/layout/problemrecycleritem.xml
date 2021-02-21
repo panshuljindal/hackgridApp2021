@@ -1,66 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="160dp"
     android:layout_height="160dp"
     android:orientation="vertical"
     android:layout_marginRight="10dp"
     android:background="@drawable/problembg"
     >
-    <TextView
-        android:id="@+id/problemItemTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="17dp"
-        android:textSize="8dp"
-        android:text="Healthcare"
-        android:textColor="#307FE2"
-        android:textStyle="bold"
-        android:fontFamily="@font/robotoregular"
-        />
 
-    <TextView
-        android:id="@+id/problemItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="17dp"
-        android:textSize="12dp"
-        android:text="Covid Fighter"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:fontFamily="@font/helveticaneue_medium"
-        />
-    <TextView
-        android:id="@+id/problemItemIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="17dp"
-        android:textSize="8dp"
-        android:text="Use your skills to solve the issue of Covid 19 with Lorem Ipsum... text"
-        android:layout_marginRight="17dp"
-        android:textColor="#707070"
-        android:textStyle="bold"
-        android:fontFamily="@font/robotolight"
-        />
-
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/problemdlbg"
-        android:text="Download"
-        android:textColor="#ffffff"
-        android:textAllCaps="false"
-        android:textSize="8dp"
-        android:fontFamily="@font/helveticaneue_regular"
+        android:layout_height="match_parent">
 
-        />
+        <Button
+            android:id="@+id/problemButton"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/problemdlbg"
 
+            android:fontFamily="@font/helveticaneue_regular"
+            android:text="Download"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/problemItemIntro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:text="Use your skills to solve the issue of Covid 19 with Lorem Ipsum... text"
+            android:textColor="#707070"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problemItemName" />
+
+        <TextView
+            android:id="@+id/problemItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/helveticaneue_medium"
+            android:text="Covid Fighter"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problemItemTheme" />
+
+        <TextView
+            android:id="@+id/problemItemTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:text="Healthcare"
+            android:textColor="#307FE2"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

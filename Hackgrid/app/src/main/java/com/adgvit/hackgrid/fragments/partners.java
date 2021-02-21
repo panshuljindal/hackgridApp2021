@@ -1,4 +1,4 @@
-package com.adgvit.hackgrid;
+package com.adgvit.hackgrid.fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.adgvit.hackgrid.R;
+
 public class partners extends Fragment {
     View view;
 
