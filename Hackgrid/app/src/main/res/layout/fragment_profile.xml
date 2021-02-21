@@ -3,32 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".profile">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <TextView
-            android:id="@+id/tracksHead"
+            android:id="@+id/profileHead1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/helveticaneue_medium"
-            android:text="Tracks"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/helveticaneue_medium"
+            android:text="Profile"
             android:textColor="#000000"
             android:textSize="34dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
-    <FrameLayout
-        android:id="@+id/parentFragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
 
+    <TextView
+        android:id="@+id/profileLoginTxt1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/domainsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginTop="200dp"
+        android:textAlignment="center"
+        android:text="Login or Register\nTo view this Section"
+        android:textColor="#c4c4c4"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/loginbtnbg"
+        android:fontFamily="@font/helveticaneue_medium"
+        android:textStyle="bold"
+        android:text="Download"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+         />
+
+    <Button
+        android:id="@+id/problemItemTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/helveticaneue_medium"
+        android:text="@string/loginHackerEarth"
+        android:textColor="#307FE2"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>
