@@ -24,6 +24,11 @@
             android:textStyle="bold"
             />
     </LinearLayout>
-    
+    <FrameLayout
+        android:id="@+id/parentFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
 
 </LinearLayout>
