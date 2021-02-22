@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/timelinestatus"
+        android:layout_width="23dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/linecur"
+        />
+    <LinearLayout
+        android:id="@+id/detailsParentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/eventTimeID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="16dp"
+            android:text="12:00 PM"
+            android:textColor="#307FE2"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            />
+        <TextView
+            android:id="@+id/eventNameID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="16dp"
+            android:text="Opening Ceremony"
+            android:textColor="#307FE2"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            />
+
+        <TextView
+            android:id="@+id/eventIntro"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/sfpro"
+            android:text="Welcome Address to the Guests and Participants"
+            android:textColor="#1C1C1E"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="Watch Live >"
+            android:textAllCaps="false"
+            android:textColor="#307FE2"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sfpro"
+            android:textSize="10dp"
+
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
