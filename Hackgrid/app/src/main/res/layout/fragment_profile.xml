@@ -29,29 +29,28 @@
         android:id="@+id/profileLoginTxt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/robotolight"
         android:layout_marginTop="200dp"
-        android:textAlignment="center"
+        android:fontFamily="@font/robotolight"
+        android:gravity="center_horizontal"
         android:text="Login or Register\nTo view this Section"
+        android:textAlignment="center"
         android:textColor="#c4c4c4"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="230dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:foreground="?android:attr/selectableItemBackground"
         android:background="@drawable/loginbtnbg"
         android:fontFamily="@font/helveticaneue_medium"
-        android:textStyle="bold"
-        android:text="Download"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Login"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="14dp"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/problemItemTheme"

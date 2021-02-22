@@ -12,7 +12,7 @@
         android:layout_marginTop="0dp"
         android:layout_width="23dp"
         android:layout_height="match_parent"
-        android:src="@drawable/linenotcur"
+        android:src="@drawable/ic_topdone"
         />
     <LinearLayout
         android:id="@+id/detailsParentView"
@@ -30,7 +30,7 @@
             android:text="12:00 PM"
             android:textColor="#307FE2"
             android:textStyle="bold"
-            android:fontFamily="@font/robotoregular"
+            android:fontFamily="@font/helveticaneue_regular"
             />
         <TextView
             android:id="@+id/eventNameID"
@@ -42,7 +42,7 @@
             android:text="Opening Ceremony"
             android:textColor="#307FE2"
             android:textStyle="bold"
-            android:fontFamily="@font/robotoregular"
+            android:fontFamily="@font/helveticaneue_regular"
             />
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="65dp"
             android:layout_marginRight="35dp"
-            android:fontFamily="@font/sfpro"
+            android:fontFamily="@font/helveticaneue_regular"
             android:text="Welcome Address to the Guests and Participants"
             android:textColor="#1C1C1E"
             android:textSize="13dp"
@@ -62,14 +62,14 @@
             android:id="@+id/eventLink"
             android:layout_width="75dp"
             android:layout_height="14dp"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/helveticaneue_regular"
             android:text="Watch Live >"
             android:textAllCaps="false"
             android:textColor="#307FE2"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/sfpro"
             android:textSize="12dp"
 
             />

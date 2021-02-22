@@ -63,7 +63,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
             holder.eventLink.setVisibility(View.VISIBLE);
             holder.eventLink.setEnabled(true);
-            //holder.imageTimeline.setBackground(ContextCompat.getDrawable(context,R.drawable.topdone));
+            holder.imageTimeline.setImageResource(R.drawable.ic_topdone);
         }
         else if(isCompleted.equals("false") & isFirst.equals("true")){
             Log.i("Type","Top");
@@ -71,7 +71,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
-            //holder.imageTimeline.setBackground(ContextCompat.getDrawable(context,R.drawable.top));
+            holder.imageTimeline.setImageResource(R.drawable.ic_top);
         }
         else if(isCompleted.equals("true") & isFirst.equals("false")){
             Log.i("Type","Middle Done");
@@ -79,7 +79,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
             holder.eventLink.setVisibility(View.VISIBLE);
             holder.eventLink.setEnabled(true);
-            // holder.imageTimeline.setBackground(ContextCompat.getDrawable(context,R.drawable.middledone));
+            holder.imageTimeline.setImageResource(R.drawable.ic_middledone);
         }
         else if(isCompleted.equals("false") & isFirst.equals("false")){
             Log.i("Type","Middle");
@@ -87,7 +87,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
-            //holder.imageTimeline.setBackground(ContextCompat.getDrawable(context,R.drawable.middle));
+            holder.imageTimeline.setImageResource(R.drawable.ic_middle);
         }
         else {
             Log.i("Type","Else");
