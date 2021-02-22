@@ -57,7 +57,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
         String isCompleted = model.getIsCompleted();
         Log.i("isFirst",isFirst);
         Log.i("isCompleted",isCompleted);
-        if(isCompleted.equals("true") & isFirst.equals("true")){
+        if(isCompleted.equals("true") && isFirst.equals("true")){
             Log.i("Type","Top Done");
             holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
@@ -65,7 +65,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventLink.setEnabled(true);
             holder.imageTimeline.setImageResource(R.drawable.ic_topdone);
         }
-        else if(isCompleted.equals("false") & isFirst.equals("true")){
+        else if(isCompleted.equals("false") && isFirst.equals("true")){
             Log.i("Type","Top");
             holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
@@ -73,7 +73,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventLink.setEnabled(false);
             holder.imageTimeline.setImageResource(R.drawable.ic_top);
         }
-        else if(isCompleted.equals("true") & isFirst.equals("false")){
+        else if(isCompleted.equals("true") && isFirst.equals("false")){
             Log.i("Type","Middle Done");
             holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
@@ -81,7 +81,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             holder.eventLink.setEnabled(true);
             holder.imageTimeline.setImageResource(R.drawable.ic_middledone);
         }
-        else if(isCompleted.equals("false") & isFirst.equals("false")){
+        else if(isCompleted.equals("false") && isFirst.equals("false")){
             Log.i("Type","Middle");
             holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));

@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="35dp"
             android:fontFamily="@font/helveticaneue_regular"
             android:text="Welcome Address to the Guests and Participants"
