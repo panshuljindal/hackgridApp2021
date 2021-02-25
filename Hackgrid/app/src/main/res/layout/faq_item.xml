@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#E5E5EA"
+        app:cardBackgroundColor="@color/faqBack"
         app:cardCornerRadius="10dp"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="20dp">
@@ -42,7 +42,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="14dp"
                 android:text="ODs will be provided to the participants for attending the workshops and events."
-                android:textColor="#2C2C2E"
+                android:textColor="@color/faqAnswer"
                 android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/faqQuestion" />

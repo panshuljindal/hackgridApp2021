@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragment_background"
     tools:context=".faq">
 
     <TextView
@@ -14,7 +15,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="30dp"
         android:text="FAQ"
-        android:textColor="#000000"
+        android:textColor="@color/timelineHeading"
         android:textSize="34dp"
         android:fontFamily="@font/helveticaneue_medium"
         android:textStyle="bold"

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".timeline"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/fragment_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:textColor="#000000"
+            android:textColor="@color/timelineHeading"
             android:textSize="34dp"
             android:textStyle="bold"
             />
@@ -47,7 +48,7 @@
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/sfpro"
                     android:text="Day 2"
-                    android:textColor="#000000"
+                    android:textColor="@color/timelineSubHeading"
                     android:textSize="24dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
+                    android:paddingBottom="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +73,7 @@
                     android:text="Day 1"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="17dp"
-                    android:textColor="#000000"
+                    android:textColor="@color/timelineSubHeading"
                     android:textSize="24dp"
                     android:textStyle="bold"
                     app:layout_constraintTop_toTopOf="parent"

@@ -9,4 +9,23 @@
     <color name="white">#FFFFFFFF</color>
     <color name="timeline_black">#2C2C2E</color>
     <color name="timeline_blue">#007AFF</color>
+
+    <color name="fragment_background">#ffffff</color>
+    //Timeline
+    <color name="timelineHeading">#000000</color>
+    <color name="timelineSubHeading">#1C1C1E</color>
+    <color name="timelineName">#2C2C2E</color>
+    <color name="timelineDesc">#1C1C1E</color>
+    <color name="timelineSubSub">#8E8E93</color>
+
+    <color name="problemStatement">#707070</color>
+    <color name="problemStatementBack">#F2F2F2</color>
+    <color name="problemStatementHeading">#000000</color>
+    <color name="problemStatementSub">#707070</color>
+
+    <color name="faqAnswer">#2C2C2E</color>
+    <color name="faqBack">#E5E5EA</color>
+    <color name="faqSearch">#993C3C43</color>
+
+
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="timeline_black">#2C2C2E</color>
+    <color name="timeline_blue">#007AFF</color>
+
+    <color name="fragment_background">#000000</color>
+    //Timeline
+    <color name="timelineHeading">#FFFFFF</color>
+    <color name="timelineSubHeading">#F2F2F7</color>
+    <color name="timelineName">#E5E5EA</color>
+    <color name="timelineDesc">#AEAEB2</color>
+    <color name="timelineSubSub">#8E8E93</color>
+
+    <color name="problemStatement">#C4C4C4</color>
+    <color name="problemStatementBack">#262626</color>
+    <color name="problemStatementHeading">#ffffff</color>
+    <color name="problemStatementSub">#C4C4C4</color>
+
+    <color name="faqAnswer">#F2F2F7</color>
+    <color name="faqBack">#2C2C2E</color>
+    <color name="faqSearch">#99EBEBF5</color>
+
+</resources>

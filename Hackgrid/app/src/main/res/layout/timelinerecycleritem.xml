@@ -1,60 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
-    android:layout_width="match_parent"
-    android:layout_height="190dp"
     android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/timelineStatus"
-        android:layout_marginTop="0dp"
         android:layout_width="23dp"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_topdone"
-        />
+        android:layout_marginTop="0dp"
+        android:src="@drawable/ic_topdone" />
+
     <LinearLayout
         android:id="@+id/detailsParentView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/eventTimeID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
-            android:textSize="16dp"
-            android:text="12:00 PM"
-            android:textColor="#307FE2"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/helveticaneue_regular"
-            />
+            android:text="12:00 PM"
+            android:textColor="@color/timelineName"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/eventNameID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
-            android:textSize="16dp"
-            android:text="Opening Ceremony"
-            android:textColor="#307FE2"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/helveticaneue_regular"
-            />
+            android:text="Opening Ceremony"
+            android:textColor="@color/timelineName"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/eventIntro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="35dp"
             android:fontFamily="@font/helveticaneue_regular"
             android:text="Welcome Address to the Guests and Participants"
-            android:textColor="#1C1C1E"
+            android:textColor="@color/timelineDesc"
             android:textSize="13dp"
             android:textStyle="bold" />
 

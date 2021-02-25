@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -95,7 +96,8 @@ public class tracks extends Fragment {
             problemList = problemList1;
         }
         problemStatementAdapter adapter = new problemStatementAdapter(problemList,view.getContext());
-        LinearLayoutManager manager = new LinearLayoutManager(view.getContext());
+       LinearLayoutManager manager = new LinearLayoutManager(view.getContext());
+        //GridLayoutManager manager = new GridLayoutManager(view.getContext(),2);
         manager.setOrientation(RecyclerView.HORIZONTAL);
         problemRecyclerView.setLayoutManager(manager);
         problemRecyclerView.setAdapter(adapter);

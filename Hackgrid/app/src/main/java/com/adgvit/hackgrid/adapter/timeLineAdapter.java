@@ -67,8 +67,8 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
         }
         else if(isCompleted.equals("false") && isFirst.equals("true")){
             Log.i("Type","Top");
-            holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
-            holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
+            //holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
+            //holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
             holder.imageTimeline.setImageResource(R.drawable.ic_top);
@@ -83,8 +83,8 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
         }
         else if(isCompleted.equals("false") && isFirst.equals("false")){
             Log.i("Type","Middle");
-            holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
-            holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
+            //holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
+           // holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
             holder.imageTimeline.setImageResource(R.drawable.ic_middle);

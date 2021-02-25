@@ -11,6 +11,7 @@ import com.adgvit.hackgrid.R;
 import com.adgvit.hackgrid.fragments.faq;
 import com.adgvit.hackgrid.fragments.partners;
 import com.adgvit.hackgrid.fragments.profile;
+import com.adgvit.hackgrid.fragments.profileLoggedIn;
 import com.adgvit.hackgrid.fragments.timeline;
 import com.adgvit.hackgrid.fragments.tracks;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedfragment = new faq();
                         break;
                     case R.id.navigation_profile:
-                        selectedfragment = new profile();
+                        selectedfragment = new profileLoggedIn();
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,selectedfragment).commit();
