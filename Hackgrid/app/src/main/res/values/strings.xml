@@ -5,4 +5,8 @@
     <string name="healthc">Healthc</string>
 
     <string name="loginHackerEarth"><u>Register Using Hackerearth</u></string>
+
+    <string name="themeDark">App Theme: <u>Dark</u></string>
+    <string name="themeSystemdefault">App Theme: <u>System Default</u></string>
+    <string name="themeLight">App Theme: <u>Light</u></string>
 </resources>
