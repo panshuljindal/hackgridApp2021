@@ -2,7 +2,7 @@
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_700">#000</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
@@ -20,12 +20,16 @@
 
     <color name="problemStatement">#707070</color>
     <color name="problemStatementBack">#F2F2F2</color>
-    <color name="problemStatementHeading">#000000</color>
     <color name="problemStatementSub">#707070</color>
 
     <color name="faqAnswer">#2C2C2E</color>
     <color name="faqBack">#E5E5EA</color>
     <color name="faqSearch">#993C3C43</color>
 
+    <color name="profileBack">#F2F2F7</color>
+    <color name="logOutBack">#FF3B30</color>
+    <color name="joinDiscordBack">#0A84FF</color>
+    <color name="logoutText">#ffffff</color>
+    <color name="joinDiscordText">#ffffff</color>
 
 </resources>

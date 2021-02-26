@@ -61,7 +61,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/helveticaneue_medium"
             android:text="Covid Fighter"
-            android:textColor="@color/problemStatementHeading"
+            android:textColor="@color/timelineHeading"
             android:textSize="14dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragment_background"
     >
 
     <LinearLayout
@@ -23,7 +24,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:textColor="#000000"
+            android:textColor="@color/timelineHeading"
             android:textSize="34sp"
             android:textStyle="bold"
             />
@@ -37,7 +38,7 @@
         android:text="Hey! Arupam"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="17dp"
-        android:textColor="#000000"
+        android:textColor="@color/timelineSubHeading"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/profileHeader"
@@ -51,7 +52,7 @@
         android:layout_marginLeft="17dp"
         android:textSize="10sp"
         android:text="Hope you’re having a good time at Hackgrid 2021"
-        android:textColor="#8E8E93"
+        android:textColor="@color/timelineSubSub"
         android:textStyle="bold"
         android:fontFamily="@font/robotolight"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +66,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        app:cardBackgroundColor="#F2F2F7"
+        app:cardBackgroundColor="@color/profileBack"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +75,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F2F2F7">
+            android:background="@color/profileBack">
 
             <ImageView
                 android:id="@+id/profilePic"
@@ -97,7 +98,7 @@
                 android:layout_marginTop="45dp"
                 android:fontFamily="@font/helveticaneu_bold"
                 android:text="Arupam Saha"
-                android:textColor="@android:color/black"
+                android:textColor="@color/timelineHeading"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/profilePic"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -110,7 +111,7 @@
                 android:layout_marginTop="1dp"
                 android:fontFamily="@font/helveticaneue_medium"
                 android:text="19MIC0106"
-                android:textColor="@android:color/black"
+                android:textColor="@color/timelineHeading"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@+id/profilePic"
                 app:layout_constraintTop_toBottomOf="@+id/profileName" />
@@ -125,7 +126,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/helveticaneu_bold"
                 android:text="Email"
-                android:textColor="#8E8E93"
+                android:textColor="@color/timelineSubSub"
                 android:textSize="9sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -138,7 +139,7 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/helveticaneue_medium"
                 android:text="arupamkumar.saha2019@vitstudent.ac.in"
-                android:textColor="@color/black"
+                android:textColor="@color/timelineHeading"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -151,7 +152,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/helveticaneue_medium"
                 android:text="Contact No."
-                android:textColor="#8E8E93"
+                android:textColor="@color/timelineSubSub"
                 android:textSize="9sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userEmail" />
@@ -164,7 +165,7 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/helveticaneue_medium"
                 android:text="+91 8650997269"
-                android:textColor="@color/black"
+                android:textColor="@color/timelineHeading"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -198,7 +199,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Logout"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/logoutText"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -216,7 +217,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Join Discord"
             android:textAllCaps="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/joinDiscordText"
             android:textSize="12sp" />
     </LinearLayout>
 
