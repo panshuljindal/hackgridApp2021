@@ -7,24 +7,7 @@
     android:orientation="vertical"
     android:background="@color/fragment_background"
     tools:context=".tracks">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:id="@+id/tracksHead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/helveticaneue_medium"
-            android:text="Tracks"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/timelineHeading"
-            android:textSize="34dp"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,20 +19,41 @@
             android:scrollbars="vertical"
             >
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tracksHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/helveticaneue_medium"
+                    android:text="Tracks"
+                    android:textColor="@color/timelineHeading"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/domainsHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/sfpro"
                 android:text="Domains"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="17dp"
                 android:textColor="@color/timelineSubHeading"
                 android:textSize="24dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-               />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
             <TextView
                 android:id="@+id/domainIntro"
                 android:layout_width="wrap_content"
