@@ -164,7 +164,7 @@ public class faq extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                //Log.i("Data","Cancelled");
+                Log.i("Data","Cancelled");
                 loadData();
             }
         });
@@ -189,21 +189,26 @@ public class faq extends Fragment {
         }
     }
     public void adapter(){
+        if (list1.isEmpty()==false){
+            Log.i("Adapter","Empty");
+            ui1.setVisibility(View.INVISIBLE);
+            lottieAnimationView.setVisibility(View.VISIBLE);
+
+        }
+        else {
+            Log.i("Adapter","Not Empty");
+            ui1.setVisibility(View.VISIBLE);
+            lottieAnimationView.pauseAnimation();
+            lottieAnimationView.setVisibility(View.INVISIBLE);
+
+        }
         faqAdapter= new faqAdapter(list1,view.getContext());
         LinearLayoutManager manager =new LinearLayoutManager(view.getContext());
         manager.setOrientation(RecyclerView.VERTICAL);
         faq.setLayoutManager(manager);
         faq.setAdapter(faqAdapter);
 
-        if (list1.isEmpty() ){
-            ui1.setVisibility(View.INVISIBLE);
-            lottieAnimationView.setVisibility(View.VISIBLE);
 
-        }
-        else {
-            ui1.setVisibility(View.VISIBLE);
-            lottieAnimationView.pauseAnimation();
-            lottieAnimationView.setVisibility(View.INVISIBLE);
-        }
+
     }
 }
