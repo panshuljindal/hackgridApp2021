@@ -14,7 +14,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.adgvit.hackgrid.R;
+import com.adgvit.hackgrid.fragments.partners;
 import com.adgvit.hackgrid.model.SpeakerModel;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -39,12 +41,8 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.MyViewHo
         SpeakerModel model = speakerList.get(position);
         holder.speakerName.setText(model.getSpeakerName());
         holder.speakerDesignation.setText(model.getSpeakerDesignation());
-        holder.speakerImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, model.getSpeakerImage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        Glide.with(mContext).load(model.getSpeakerImage()).into(holder.speakerImage);
+
     }
 
     @Override
@@ -54,12 +52,12 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView speakerName,speakerDesignation;
-        ConstraintLayout speakerImage;
+        ImageView speakerImage;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             speakerName = itemView.findViewById(R.id.speakerName);
             speakerDesignation = itemView.findViewById(R.id.speakerDesig);
-            speakerImage = itemView.findViewById(R.id.speakerImage);
+            speakerImage = itemView.findViewById(R.id.speakerImageView);
         }
     }
 }

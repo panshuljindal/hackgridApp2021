@@ -3,6 +3,7 @@ package com.adgvit.hackgrid.fragments;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,12 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ScrollView;
 
 import com.adgvit.hackgrid.R;
 import com.adgvit.hackgrid.adapter.SpeakerAdapter;
 import com.adgvit.hackgrid.adapter.SponsorsAdapter;
 import com.adgvit.hackgrid.model.SpeakerModel;
 import com.adgvit.hackgrid.model.SponsorsModel;
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,6 +36,8 @@ public class partners extends Fragment {
     RecyclerView sponsorRecyclerView,speakerRecyclerView;
     Button aboutUs;
     DatabaseReference myref,myref1;
+    LottieAnimationView animation;
+    ConstraintLayout ui1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +52,12 @@ public class partners extends Fragment {
         sponsorRecyclerView = view.findViewById(R.id.sponsorRecyclerView);
         speakerRecyclerView = view.findViewById(R.id.speakerRecyclerView);
         aboutUs = view.findViewById(R.id.aboutUsButton);
+        ui1 = view.findViewById(R.id.partnersConstraintLayout);
+        animation = view.findViewById(R.id.partnersAnimationView);
+
+        animation.setVisibility(View.VISIBLE);
+        ui1.setVisibility(View.INVISIBLE);
+
         sponsorsList =new ArrayList<>();
         speakerList = new ArrayList<>();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -72,6 +83,16 @@ public class partners extends Fragment {
         manager.setOrientation(RecyclerView.HORIZONTAL);
         sponsorRecyclerView.setLayoutManager(manager);
         sponsorRecyclerView.setAdapter(sponsorsAdapter);
+        if (sponsorsList.isEmpty()){
+            ui1.setVisibility(View.INVISIBLE);
+            animation.setVisibility(View.VISIBLE);
+
+        }
+        else {
+            ui1.setVisibility(View.VISIBLE);
+            animation.pauseAnimation();
+            animation.setVisibility(View.INVISIBLE);
+        }
     }
     public void adapter2(){
         SpeakerAdapter adapter = new SpeakerAdapter(speakerList,view.getContext());
@@ -79,6 +100,16 @@ public class partners extends Fragment {
         manager.setOrientation(RecyclerView.HORIZONTAL);
         speakerRecyclerView.setLayoutManager(manager);
         speakerRecyclerView.setAdapter(adapter);
+        if (speakerList.isEmpty()){
+            ui1.setVisibility(View.INVISIBLE);
+            animation.setVisibility(View.VISIBLE);
+
+        }
+        else {
+            ui1.setVisibility(View.VISIBLE);
+            animation.pauseAnimation();
+            animation.setVisibility(View.INVISIBLE);
+        }
     }
     public void addData(){
         myref.addValueEventListener(new ValueEventListener() {

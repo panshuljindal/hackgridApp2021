@@ -2,6 +2,7 @@ package com.adgvit.hackgrid.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,9 +64,12 @@ public class trackDomainAdapter extends RecyclerView.Adapter<trackDomainAdapter.
         holder.domainLinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context, holder.domainName.getText(), Toast.LENGTH_SHORT).show();
-                addData(holder.domainName.getText().toString());
-
+                if(isNetworkAvailable(context)) {
+                    addData(holder.domainName.getText().toString());
+                }
+                else {
+                    Toast.makeText(context, "Please connect to internet connection", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -86,7 +90,7 @@ public class trackDomainAdapter extends RecyclerView.Adapter<trackDomainAdapter.
                 for(DataSnapshot ds:snapshot.getChildren()){
                     //Log.i("ds",ds.getValue().toString());
                     problemStatementModel model = ds.getValue(problemStatementModel.class);
-                    problemList1.add(new problemStatementModel(model.getDomainName(),model.getStatementDownload(),model.getStatementInfo(),model.getStatementName()));
+                    problemList1.add(model);
                     //Log.i("INFO",problemList1.toString());
 
                 }
@@ -109,7 +113,10 @@ public class trackDomainAdapter extends RecyclerView.Adapter<trackDomainAdapter.
         editor.apply();
         tracks.adapter2();
     }
-
+    boolean isNetworkAvailable(final Context context) {
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
+    }
 
 
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,16 +9,38 @@
     android:background="@color/fragment_background"
     tools:context=".tracks">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tracksAnimationView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tracksConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            >
+            android:scrollbars="vertical">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -54,20 +77,20 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
             <TextView
                 android:id="@+id/domainIntro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="17dp"
-                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/robotolight"
                 android:text="Select a Domain to see Problem Statements available"
                 android:textColor="@color/timelineSubSub"
+                android:textSize="14dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/robotolight"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/domainsHeader"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/domainsHeader" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/domainRecycler"
@@ -93,21 +116,21 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/domainRecycler" />
+
             <TextView
                 android:id="@+id/problemIntro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:layout_goneMarginLeft="17dp"
                 android:layout_marginLeft="17dp"
-                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/robotolight"
                 android:text="Select a Domain to see Problem Statements available"
                 android:textColor="@color/timelineSubSub"
+                android:textSize="14dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/robotolight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/problemHeader"
-                />
+                app:layout_goneMarginLeft="17dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/problemRecycler1"
@@ -123,4 +146,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

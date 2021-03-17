@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.speech.RecognizerIntent;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 import com.adgvit.hackgrid.R;
 import com.adgvit.hackgrid.adapter.faqAdapter;
 import com.adgvit.hackgrid.model.faqModel;
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -50,6 +53,8 @@ public class faq extends Fragment {
     faqAdapter faqAdapter;
     ImageView micButton;
     DatabaseReference myref;
+    LottieAnimationView lottieAnimationView;
+    ConstraintLayout ui1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +69,11 @@ public class faq extends Fragment {
         faq = view.findViewById(R.id.faqRecyclerview);
         searchEditText = view.findViewById(R.id.searchEditText);
         micButton = view.findViewById(R.id.micButton1);
+        lottieAnimationView = view.findViewById(R.id.faqAnimationView);
+        ui1 = view.findViewById(R.id.faqConstraintLayout);
 
+        ui1.setVisibility(View.INVISIBLE);
+        lottieAnimationView.setVisibility(View.VISIBLE);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myref=database.getReference("FAQ");
         loadData();
@@ -137,6 +146,7 @@ public class faq extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
+                    //Log.i("Data","Change1");
                     list1.clear();
                     for (DataSnapshot ds : snapshot.getChildren()) {
                         faqModel faq = ds.getValue(faqModel.class);
@@ -146,6 +156,7 @@ public class faq extends Fragment {
                     adapter();
                 }
                 catch (Exception e){
+                    //Log.i("Data","Change2");
                     Toast.makeText(view.getContext(), "Error Occurred Please Try Again", Toast.LENGTH_SHORT).show();
                 }
 
@@ -153,7 +164,8 @@ public class faq extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                //Log.i("Data","Cancelled");
+                loadData();
             }
         });
 
@@ -182,5 +194,16 @@ public class faq extends Fragment {
         manager.setOrientation(RecyclerView.VERTICAL);
         faq.setLayoutManager(manager);
         faq.setAdapter(faqAdapter);
+
+        if (list1.isEmpty() ){
+            ui1.setVisibility(View.INVISIBLE);
+            lottieAnimationView.setVisibility(View.VISIBLE);
+
+        }
+        else {
+            ui1.setVisibility(View.VISIBLE);
+            lottieAnimationView.pauseAnimation();
+            lottieAnimationView.setVisibility(View.INVISIBLE);
+        }
     }
 }

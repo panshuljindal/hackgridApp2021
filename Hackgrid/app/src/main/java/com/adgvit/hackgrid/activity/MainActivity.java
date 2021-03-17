@@ -1,4 +1,4 @@
-package com.adgvit.hackgrid;
+package com.adgvit.hackgrid.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         bottomNavigationView = findViewById(R.id.nav_view);
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new timeline()).commit();

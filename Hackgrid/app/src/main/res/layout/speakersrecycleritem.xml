@@ -9,13 +9,24 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="20dp"
+        android:background="@color/fragment_background">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/speakerImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/samplespeaker">
+            android:background="@color/fragment_background">
 
+
+            <ImageView
+                android:id="@+id/speakerImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/samplespeaker" />
 
             <TextView
                 android:id="@+id/speakerName"
@@ -36,10 +47,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="10dp"
-                android:fontFamily="@font/helveticaneue"
+                android:fontFamily="@font/helveticaneue_regular"
                 android:text="UI/UX Designer, Hackgrid"
                 android:textColor="@color/white"
-                android:textSize="6sp"
+                android:textSize="7dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

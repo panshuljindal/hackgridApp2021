@@ -25,6 +25,7 @@
     <color name="faqAnswer">#F2F2F7</color>
     <color name="faqBack">#2C2C2E</color>
     <color name="faqSearch">#99EBEBF5</color>
+    <color name="faqSearchBack">#3D767680</color>
 
     <color name="profileBack">#1C1C1E</color>
     <color name="logOutBack">#4DFF2D55</color>

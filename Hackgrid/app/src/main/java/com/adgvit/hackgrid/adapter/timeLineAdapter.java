@@ -52,11 +52,11 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
         holder.eventTime.setText(model.getTime());
         holder.eventName.setText(model.getHeading());
         holder.eventDescription.setText(model.getDescription());
-       // holder.eventLink.setText(model.getLink());
+        //holder.eventLink.setText(model.getLink());
         String isFirst=model.getIsFirst();
         String isCompleted = model.getIsCompleted();
-        Log.i("isFirst",isFirst);
-        Log.i("isCompleted",isCompleted);
+        //Log.i("isFirst",isFirst);
+        //Log.i("isCompleted",isCompleted);
         if(isCompleted.equals("true") && isFirst.equals("true")){
             Log.i("Type","Top Done");
             holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_blue));
@@ -71,7 +71,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             //holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
-            holder.imageTimeline.setImageResource(R.drawable.ic_top);
+           // holder.imageTimeline.setImageResource(R.drawable.ic_top);
         }
         else if(isCompleted.equals("true") && isFirst.equals("false")){
             Log.i("Type","Middle Done");
@@ -84,7 +84,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
         else if(isCompleted.equals("false") && isFirst.equals("false")){
             Log.i("Type","Middle");
             //holder.eventName.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
-           // holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
+            //holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
             holder.imageTimeline.setImageResource(R.drawable.ic_middle);
