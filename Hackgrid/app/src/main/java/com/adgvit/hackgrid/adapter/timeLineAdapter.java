@@ -71,7 +71,7 @@ public class timeLineAdapter extends RecyclerView.Adapter<timeLineAdapter.MyView
             //holder.eventTime.setTextColor(ContextCompat.getColor(context,R.color.timeline_black));
             holder.eventLink.setVisibility(View.INVISIBLE);
             holder.eventLink.setEnabled(false);
-           // holder.imageTimeline.setImageResource(R.drawable.ic_top);
+            holder.imageTimeline.setImageResource(R.drawable.ic_top1);
         }
         else if(isCompleted.equals("true") && isFirst.equals("false")){
             Log.i("Type","Middle Done");

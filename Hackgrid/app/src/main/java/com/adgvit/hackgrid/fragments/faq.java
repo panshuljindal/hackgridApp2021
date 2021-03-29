@@ -151,6 +151,7 @@ public class faq extends Fragment {
                     for (DataSnapshot ds : snapshot.getChildren()) {
                         faqModel faq = ds.getValue(faqModel.class);
                         list1.add(new faqModel(faq.getQuestion(), faq.getAnswer()));
+                        Log.i(faq.getQuestion(),faq.getAnswer());
                     }
                     saveData();
                     adapter();
@@ -189,7 +190,7 @@ public class faq extends Fragment {
         }
     }
     public void adapter(){
-        if (list1.isEmpty()==false){
+        if (list1.isEmpty()){
             Log.i("Adapter","Empty");
             ui1.setVisibility(View.INVISIBLE);
             lottieAnimationView.setVisibility(View.VISIBLE);
