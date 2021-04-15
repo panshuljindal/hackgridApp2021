@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedfragment = new faq();
                         break;
                     case R.id.navigation_profile:
-                        selectedfragment = new profileLoggedIn();
+                        selectedfragment = new profile();
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,selectedfragment).commit();

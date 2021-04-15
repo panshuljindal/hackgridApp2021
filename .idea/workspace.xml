@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85a47dbe-e9a4-449c-b27d-d29d89ed29b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hackgridApp2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hackgridApp2021.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hackgrid/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hackgrid/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +20,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Hackgrid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="SvnConfiguration">
